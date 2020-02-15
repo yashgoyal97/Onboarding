@@ -18,6 +18,8 @@ class OnboardingApp extends PolymerElement {
     <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}"></app-route>     
     <iron-pages selected="[[page]]" attr-for-selected="name" role="main">
       <registration-page name="registration"></registration-page>
+      <login-page name="login"></login-page>
+      <user-page name="user"></user-page>
       <view404-page name='view404'></view404-page>
     </iron-pages>
     `;
@@ -47,7 +49,7 @@ class OnboardingApp extends PolymerElement {
   _routePageChanged(page) {
     if (!page) {
       this.page = 'registration';
-    } else if (['registration'].indexOf(page) !== -1) {
+    } else if (['registration', 'login', 'user'].indexOf(page) !== -1) {
       this.page = page;
     } else {
       this.page = 'view404';
@@ -62,6 +64,12 @@ class OnboardingApp extends PolymerElement {
     switch (page) {
       case 'registration':
         import('./registration-page.js');
+        break;
+      case 'user':
+        import('./user-page.js');
+        break;
+      case 'login':
+        import('./login-page.js');
         break;
       case 'view404':
         import('./view404-page.js');
