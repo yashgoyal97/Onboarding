@@ -1,0 +1,6 @@
+{
+  "name": "Onboarding",
+  "short_name": "Onboarding",
+  "start_url": "/",
+  "display": "standalone"
+}
