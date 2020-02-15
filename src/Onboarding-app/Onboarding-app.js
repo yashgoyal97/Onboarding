@@ -1,3 +1,4 @@
+
 import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
 import { setPassiveTouchGestures, setRootPath } from '@polymer/polymer/lib/utils/settings.js';
 import '@polymer/app-route/app-location.js';
