@@ -1,4 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+import '@polymer/paper-toast/paper-toast.js';
 
 /**
  * @customElement
